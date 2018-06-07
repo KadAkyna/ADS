@@ -1,0 +1,1325 @@
+1001
+
+#include <stdio.h>
+
+int main()
+{
+    int num1, num2, sum;  
+          
+    scanf("%d%d",&num1,&num2);   
+    
+    sum = num1+num2;          
+     
+    printf("X = %d\n",sum);    
+     
+    return 0;
+}
+______________________________________________________________________________________________
+
+1002
+
+#include <stdio.h>
+
+int main()
+{
+    double R,A;    
+    scanf("%lf",&R);    
+    A=3.14159*R*R;    
+    printf("A=%.4lf\n",A);    
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1003
+
+#include <stdio.h>
+
+int main()
+{
+    int A,B,SOMA;
+    scanf("%d%d",&A,&B);
+    SOMA=A+B;
+    printf("SOMA = %d\n",SOMA);
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1004
+
+#include <stdio.h>
+
+int main()
+{
+    int A,B,PROD;
+    scanf("%d%d",&A,&B);
+    PROD=A*B;
+    printf("PROD = %d\n",PROD);
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1005
+
+#include <stdio.h>
+
+int main()
+{
+    float a,b,c;
+
+    scanf("%f %f",&a,&b);
+
+    c=((a*3.5)+(b*7.5))/(3.5+7.5);
+
+    printf("MEDIA = %.5f\n",c);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1006
+
+#include <stdio.h>
+
+int main()
+{
+    double a,b,c,d;
+
+    scanf("%lf %lf %lf",&a,&b,&c);
+
+    d=((a*2)+(b*3)+(c*5))/(2+3+5);
+
+    printf("MEDIA = %.1lf\n",d);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1007
+
+#include <stdio.h>
+
+int main()
+{
+    int A,B,C,D;
+    scanf("%d%d%d%d",&A,&B,&C,&D);
+    printf("DIFERENCA = %d\n",(A*B)-(C*D));
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1008
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    float c,d;
+    scanf("%d%d%f",&a,&b,&c);
+    d=b*c;
+    printf("NUMBER = %d\nSALARY = U$ %.2f\n",a,d);
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1009
+
+#include <stdio.h>
+
+int main()
+{
+    float a,b,total;
+    char name[10];
+    scanf("%s",name);
+    scanf("%f%f",&a,&b);
+    total=a+(15*b)/100;
+    printf("TOTAL = R$ %.2f\n",total);
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1010
+
+#include <stdio.h>
+
+int main()
+{
+    int code1,code2,unit1,unit2;
+    float pay, price1,price2;
+
+    scanf("%d%d%f",&code1,&unit1,&price1);
+    scanf("%d%d%f",&code2,&unit2,&price2);
+
+    pay=(unit1*price1)+(unit2*price2);
+
+    printf("VALOR A PAGAR: R$ %.2f\n",pay);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1011 
+
+#include <stdio.h>
+
+int main()
+{
+    double r, volume;
+
+    scanf("%lf",&r);
+
+    volume = (4/3.0)*3.14159*r*r*r;
+
+    printf("VOLUME = %.3lf\n",volume);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1012
+
+#include <stdio.h>
+
+int main()
+{
+ double a, b, c;
+
+ scanf("%lf %lf %lf", &a, &b, &c);
+ printf("TRIANGULO: %.3lf\n", (a * c) / 2);
+ printf("CIRCULO: %.3lf\n", c * c * 3.14159);
+ printf("TRAPEZIO: %.3lf\n", ((a + b) / 2) * c);
+ printf("QUADRADO: %.3lf\n", b * b);
+ printf("RETANGULO: %.3lf\n", a * b);
+
+ return 0;
+}
+
+______________________________________________________________________________________________
+
+1013
+
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c, tmp;
+
+	scanf("%d %d %d", &a, &b, &c);
+
+	tmp = a;
+	if(a < b || a < c){
+		if(b < c){
+			tmp = c;
+		}else{
+			tmp = b;
+		}
+	}
+
+	printf("%d eh o maior\n", tmp);
+
+	return 0;
+}
+
+______________________________________________________________________________________________
+
+1014
+
+#include <stdio.h>
+
+int main()
+{
+	double a, b;
+
+	scanf("%lf %lf", &a, &b);
+
+	printf("%.3lf km/l\n", a / b);
+
+	return 0;
+}
+
+______________________________________________________________________________________________
+
+1015
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double a,b,c,d,e;
+
+    scanf("%lf %lf",&a,&b);
+    scanf("%lf %lf",&c,&d);
+
+    e=((c-a)*(c-a))+((d-b)*(d-b));
+    e=sqrt(e);
+
+    printf("%.4lf\n",e);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1016
+
+#include <stdio.h>    
+
+int main(){
+	int n;  
+    
+	scanf("%d", &n);
+
+	printf("%d minutos\n", 150 / 60 * n);  
+
+}
+
+______________________________________________________________________________________________
+
+1017
+
+#include <stdio.h>
+int main()
+{
+    int a;
+    float b,c;
+
+    scanf("%d %f",&a,&b);
+    c=(a*b)/12;
+
+    printf("%.3f\n",c);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1018
+
+#include <stdio.h>
+ 
+int main() 
+{
+    int d[] = {100, 50, 20, 10, 5, 2, 1};
+
+    int n, t = 0;
+
+
+    scanf("%d", &n);
+
+    printf("%d\n", n);
+
+    do 
+    {
+
+        printf("%d nota(s) de R$ %d,00\n", n / d[t], d[t]);
+
+        if (n >= d[t])
+
+        n -= d[t] * (n / d[t]);
+
+    }
+    while(d[t++] != 1);
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1019
+
+#include <stdio.h>
+
+int main()
+{
+    int N,x,y,z,i;
+    scanf("%d",&N);
+    x=N/3600;
+    y=N%3600;
+    z=y/60;
+    i=y%60;
+    printf("%d:%d:%d\n", x, z, i);
+
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1020
+
+#include <stdio.h>
+ 
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a;
+    a=n/365;
+    printf("%d ano(s)\n", a);
+    int x;
+    x=n%365;
+    int b;
+    b=x/30;
+    printf("%d mes(es)\n", b);
+    int y;
+    y=x%30;
+    printf("%d dia(s)\n", y);
+
+ 
+    
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1021
+
+#include <stdio.h>
+int main()
+{
+    double A,D,E;
+    scanf ("%lf",&A);
+    int N,a,b,c,d,e,f,g,h,i,j,k,l,B,m,n,o,p,q,r,s,t,u;
+    N=A;
+    a=N/100;
+    b=N%100;
+    c=b/50;
+    d=b%50;
+    e=d/20;
+    f=d%20;
+    g=f/10;
+    h=f%10;
+    i=h/5;
+    j=h%5;
+    k=j/2;
+    l=j%2;
+
+    E=A*100;
+    B=(int) E;
+    m=B%100;
+    n=m/50;
+    o=m%50;
+    p=o/25;
+    q=o%25;
+    r=q/10;
+    s=q%10;
+    t=s/5;
+    u=s%5;
+
+    printf ("NOTAS:\n");
+    printf ("%d nota(s) de R$ 100.00\n",a);
+    printf ("%d nota(s) de R$ 50.00\n",c);
+    printf ("%d nota(s) de R$ 20.00\n",e);
+    printf ("%d nota(s) de R$ 10.00\n",g);
+    printf ("%d nota(s) de R$ 5.00\n",i);
+    printf ("%d nota(s) de R$ 2.00\n",k);
+    printf ("MOEDAS:\n");
+    printf ("%d moeda(s) de R$ 1.00\n",l);
+    printf ("%d moeda(s) de R$ 0.50\n",n);
+    printf ("%d moeda(s) de R$ 0.25\n",p);
+    printf ("%d moeda(s) de R$ 0.10\n",r);
+    printf ("%d moeda(s) de R$ 0.05\n",t);
+    printf ("%d moeda(s) de R$ 0.01\n",u);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1035
+
+#include <stdio.h>
+ 
+int main() {
+    int a,b,c,d;
+
+    scanf("%d %d %d %d",&a,&b,&c,&d);
+
+    if(b>c&&d>a&&((c+d)>(a+b))&&(c&&d)>=0&&a%2==0)
+
+    {
+
+        printf("Valores aceitos\n");
+
+    }
+
+    else printf("Valores nao aceitos\n");
+    
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1036
+
+#include<stdio.h>
+#include <math.h>
+
+int main()
+{
+	double a, b, c, t;
+	scanf("%lf %lf %lf", &a, &b, &c);
+
+	if(((b * b) - 4 * a * c) < 0 || a == 0){
+	    printf("Impossivel calcular\n");
+	}
+	else{
+		t = sqrt((b * b) - 4 * a * c);
+		printf("R1 = %.5lf\nR2 = %.5lf\n", ((-b + t) / (2 * a)), ((-b - t) / (2 * a)));
+    }
+	return 0;
+}
+
+______________________________________________________________________________________________
+
+1037
+
+#include <stdio.h>
+ 
+int main() {
+ double x;
+    scanf("%lf", &x);
+
+    if(x<0 || x>100)
+        printf("Fora de intervalo\n");
+    else if (x>=0 && x<=25) printf("Intervalo [0,25]\n"); else if (x>=25 && x<=50) printf("Intervalo (25,50]\n"); else if (x>=50 && x<=75)
+        printf("Intervalo (50,75]\n");
+    else
+        printf("Intervalo (75,100]\n");
+
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1038
+
+#include <stdio.h>
+ 
+int main() {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+
+    if(X==1)
+        printf("Total: R$ %.2lf\n", Y*4.00);
+    else if(X==2)
+        printf("Total: R$ %.2lf\n", Y*4.50);
+    else if(X==3)
+        printf("Total: R$ %.2lf\n", Y*5.00);
+    else if(X==4)
+        printf("Total: R$ %.2lf\n", Y*2.00);
+    else
+        printf("Total: R$ %.2lf\n", Y*1.50);
+
+ 
+    
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1040
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    float N1 ,N2 , N3 , N4 ,Media , extra ,final ;
+
+    scanf("%f %f %f %f",&N1,&N2,&N3,&N4);
+
+    Media=((N1*2)+(N2*3)+(N3*4)+(N4*1))/10;
+
+    printf("Media: %.1f\n",Media);
+
+    if (Media>7.0)
+
+    {
+
+        printf("Aluno aprovado.\n");
+
+    }
+
+    else if(Media<5.0)
+
+    {
+
+        printf("Aluno reprovado.\n");
+
+    }
+
+    else if(Media<6.9 && Media >= 5.0)
+
+    {
+
+        printf("Aluno em exame.\n");
+
+        scanf("%f",&extra);
+
+        printf("Nota do exame: %.1f\n",extra);
+
+        final=(Media+extra)/2;
+
+        if(final >= 5.0)
+
+        {
+
+            printf("Aluno aprovado.\n");
+
+        }
+
+        else if (final<=4.9)
+
+        {
+
+            printf("Aluno reprovado.\n");
+
+        }
+
+        printf("Media final: %.1f\n",final);
+
+    }
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1041
+
+#include<stdio.h>
+int main()
+{
+    float a,b;
+    while(scanf("%f %f",&a,&b)==2)
+    {
+
+        if(a==0 && b==0)
+            printf("Origem\n");
+
+        else if(b==0)
+            printf("Eixo X\n");
+
+        else if(a==0)
+            printf("Eixo Y\n");
+
+        else if(a>0 && b>0)
+            printf("Q1\n");
+
+        else if(a<0 && b>0)
+            printf("Q2\n");
+
+        else if(a<0 && b<0)
+            printf("Q3\n");
+        else
+            printf("Q4\n");
+
+    }
+    return 0;
+}
+______________________________________________________________________________________________
+
+1042
+
+#include <stdio.h>
+ 
+int main() {
+ 
+   int a, b, c, g, m, s, temp;
+
+    scanf("%d %d %d", &a, &b, &c);
+
+    g = a;
+
+    m = b;
+
+    s = c;
+
+    if (g < m)
+
+    {
+
+        temp = g;
+
+        g = m;
+
+        m = temp;
+
+    }
+
+    if (m < s)
+
+    {
+
+        temp = m;
+
+        m = s;
+
+        s = temp;
+
+    }
+
+    if (g < m)
+
+    {
+
+        temp = g;
+
+        g = m;
+
+        m = temp;
+
+    }
+
+    printf("%d\n%d\n%d\n\n%d\n%d\n%d\n",s,m,g,a,b,c);
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1043
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    double a,b,c;
+
+    scanf("%lf %lf %lf",&a,&b,&c);
+
+
+    if (a < b + c && b < a + c && c < a + b)
+
+    {
+
+        printf("Perimetro = %.1f\n", a + b + c);
+
+    }
+
+    else
+
+    {
+
+        printf("Area = %.1f\n", c * (a + b) / 2);
+
+    }
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1044
+
+#include <stdio.h>
+ 
+int main() {
+ 
+    int a,b;
+
+    scanf("%d %d",&a,&b);
+
+
+    if ( a%b==0||b%a==0)
+
+    {
+
+        printf("Sao Multiplos\n");
+
+    }
+
+    else
+
+    {
+
+        printf("Nao sao Multiplos\n");
+
+    }
+ 
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1045
+
+#include <stdio.h>
+
+int main()
+
+{
+
+    double a, b, c, temp;
+
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    if (a < b)
+
+    {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+
+    if (b < c)
+
+    {
+        temp = b;
+        b = c;
+        c = temp;
+    }
+
+    if (a < b)
+    {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+
+    if (a >= b + c)
+
+    {
+        printf("NAO FORMA TRIANGULO\n");
+    }
+
+    else if (a * a == b * b + c * c)
+
+    {
+        printf("TRIANGULO RETANGULO\n");
+    }
+
+    else if (a * a > b * b + c * c)
+
+    {
+        printf("TRIANGULO OBTUSANGULO\n");
+    }
+
+    else if (a * a < b * b + c * c)
+
+    {
+        printf("TRIANGULO ACUTANGULO\n");
+    }
+
+     
+
+    if (a == b && b == c)
+
+    {
+        printf("TRIANGULO EQUILATERO\n");
+    }
+
+    else if (a == b || b == c)
+
+    {
+        printf("TRIANGULO ISOSCELES\n");
+    }
+
+    return 0;
+
+}
+______________________________________________________________________________________________
+
+1046
+
+#include <stdio.h>
+
+int main()
+
+{
+
+    int strtTm, endTm, durationTm;
+
+    scanf("%d %d", &strtTm, &endTm);
+
+    durationTm = endTm - strtTm;
+
+    if (durationTm < 0)
+
+    {
+
+        durationTm = 24 + (endTm - strtTm);
+
+    }
+
+    if (strtTm == endTm)
+
+    {
+
+        printf("O JOGO DUROU 24 HORA(S)\n");
+
+    }
+
+    else printf("O JOGO DUROU %d HORA(S)\n", durationTm);
+
+
+
+    return 0;
+
+}
+______________________________________________________________________________________________
+
+1047
+
+#include <stdio.h>
+int main()
+{
+    int start_h, end_h, start_m, end_m, duration_h, duration_m;
+    scanf("%d %d %d %d", &start_h, &start_m, &end_h, &end_m);
+    
+    duration_h = end_h - start_h;
+
+    if (duration_h < 0)
+    {
+        duration_h = 24 + (end_h - start_h);
+    }
+
+ duration_m = end_m - start_m;
+ if (duration_m < 0)
+
+  {
+    duration_m = 60 + (end_m - start_m);
+    duration_h--;
+  }
+
+    if (start_h == end_h && start_m == end_m)
+
+    {
+        printf("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)\n");
+    }
+    else printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", duration_h, duration_m);
+    return 0;
+}
+______________________________________________________________________________________________
+
+1048
+
+#include<stdio.h>
+int main()
+{
+ float n;
+ scanf("%f", &n);
+ if (n <= 400.0)
+   printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 15 %%\n", n * 1.15, n * 0.15);
+ else if (n <= 800.0)
+   printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 12 %%\n", n * 1.12, n * 0.12);
+ else if (n <= 1200.0)
+   printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 10 %%\n", n * 1.10, n * 0.10);
+ else if (n <= 2000.0)
+   printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 7 %%\n", n * 1.07, n * 0.07);
+ else
+   printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 4 %%\n", n * 1.04, n * 0.04);
+ return 0;
+}
+______________________________________________________________________________________________
+
+1049
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char c1[]="vertebrado", c11[22]="ave", c12[]="mamifero";
+    char c111[]="carnivoro", c112[]="onivoro", c124[]="herbivoro";
+    char a1[]="aguia", a2[]="pomba", a3[]="homem", a4[]="vaca";
+    char c2[]="invertebrado", c21[]="inseto", c22[]="anelideo";
+    char c211[]="hematofago", a5[]="pulga", a6[]="lagarta";
+    char a7[]="sanguessuga", a8[]="minhoca";
+    char a[22], b[22], c[22];
+    scanf("%s", a);
+    if(0==strcmp(a,c1))
+    {
+        scanf("%s",b);
+        if(0==strcmp(b,c11))
+        {
+            scanf("%s",c);
+            if(0==strcmp(c,c111))
+                printf("%s\n",a1);
+            else if(0==strcmp(c,c112))
+                printf("%s\n",a2);
+        }
+        if(0==strcmp(b,c12))
+        {
+            scanf("%s",&c);
+            if(0==strcmp(c,c112))
+                printf("%s\n",a3);
+            else if(0==strcmp(c,c124))
+                printf("%s\n",a4);
+        }
+    }
+    else if(0==strcmp(a,c2))
+    {
+        scanf("%s",b);
+        if(0==strcmp(b,c21))
+        {
+            scanf("%s",&c);
+            if(0==strcmp(c,c211))
+                printf("%s\n",a5);
+            else if(0==strcmp(c,c124))
+                printf("%s\n",a6);
+        }
+        if(0==strcmp(b,c22))
+        {
+            scanf("%s",&c);
+            if(0==strcmp(c,c211))
+                printf("%s\n",a7);
+            else if(0==strcmp(c,c112))
+                printf("%s\n",a8);
+        }
+    }
+    return 0;
+}
+______________________________________________________________________________________________
+
+1050
+
+______________________________________________________________________________________________
+
+1051
+
+#include <stdio.h>
+int main()
+{
+ float n, r, f1, f2, f3;
+ scanf("%f", &n);
+
+ if(n <= 2000){
+  printf("Isento\n");
+ }else{
+  if(n > 2000 && n <= 3000){
+   f1 = n - 2000;
+   f1 = ((f1 * 8) / 100);
+   r = f1;
+  }else if(n > 3000 && n <= 4500){
+   f1 = n - 2000;
+   f2 = f1 - 1000;
+   f1 -= f2;
+   f1 = ((f1 * 8) / 100);
+   f2 = ((f2 * 18) / 100);
+   r = f2 + f1;
+  }else{
+   f1 = n - 2000;
+   f2 = f1 - 1000;
+   f3 = f2 - 1500;
+   f1 -= f2;
+   f2 -= f3;
+   f1 = ((f1 * 8) / 100);
+   f2 = ((f2 * 18) / 100);
+   f3 = ((f3 * 28) / 100);
+   r = f3 + f2 + f1;
+  }
+
+  printf("R$ %.2f\n", r);
+ }
+
+ return 0;
+}
+
+______________________________________________________________________________________________
+
+1052
+
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d", &N);
+    switch (N)
+    {
+    case 1:
+        printf("January\n");
+        break;
+    case 2:
+        printf("February\n");
+        break;
+    case 3:
+        printf("March\n");
+        break;
+    case 4:
+        printf("April\n");
+        break;
+    case 5:
+        printf("May\n");
+        break;
+    case 6:
+        printf("June\n");
+        break;
+    case 7:
+        printf("July\n");
+        break;
+    case 8:
+        printf("August\n");
+        break;
+    case 9:
+        printf("September\n");
+        break;
+    case 10:
+        printf("October\n");
+        break;
+    case 11:
+        printf("November\n");
+        break;
+    case 12:
+        printf("December\n");
+        break;
+
+    default:
+        break;
+    }
+}
+______________________________________________________________________________________________
+
+
+1059
+
+#include <stdio.h>
+ 
+int main() {
+    int i;
+ for (i = 1; i <= 100; ++i)
+ {
+  if(i % 2 == 0)
+  {
+      printf("%i\n", i);
+  }
+ }
+    return 0;
+}
+______________________________________________________________________________________________
+
+1060
+
+#include<stdio.h>
+int main()
+{
+ double n;
+ int tmp = 0, i;
+
+ for (i = 0; i < 6; ++i)
+ {
+  scanf("%lf", &n);
+  if(n > 0){
+   tmp++;
+  }
+ }
+
+ printf("%i valores positivos\n", tmp);
+
+ return 0;
+}
+______________________________________________________________________________________________
+
+1061
+
+
+#include <stdio.h>
+
+int main()
+{
+    int W,X,Y,Z,d1,h1,m1,s1,d2,h2,m2,s2,st1,st2,stf;
+    char dia1[3],dia2[3],krct;
+
+    scanf("Dia %d",&d1);
+    scanf("%d : %d : %d\n",&h1,&m1,&s1);
+    scanf("Dia %d",&d2);
+    scanf("%d : %d : %d",&h2,&m2,&s2);
+
+    st1=(s1+m1*60+h1*60*60+d1*60*60*24);//calculo para transformar em segundos
+    st2=(s2+m2*60+h2*60*60+d2*60*60*24);//caluclo para transformar em segundos
+
+
+    stf=(st2-st1);
+    W=stf/(60*60*24);//calculo para dia
+    X=(stf-W*60*60*24)/(60*60);//calculo para hora
+    Y=(stf-W*60*60*24-X*60*60)/60;//calculo para minuto
+    Z=stf-W*60*60*24-X*60*60-Y*60;//calculo para segundos
+
+    //exibe na tela a resposta:
+    printf("%d dia(s)\n",W);
+    printf("%d hora(s)\n",X);
+    printf("%d minuto(s)\n",Y);
+    printf("%d segundo(s)\n",Z);
+
+}
+
+______________________________________________________________________________________________
+
+1062
+______________________________________________________________________________________________
+
+1063
+______________________________________________________________________________________________
+
+1064
+______________________________________________________________________________________________
+
+1065
+
+#include <stdio.h>
+
+int main()
+{
+ int a, i;
+ int tmp = 0;
+
+ for (i = 0; i < 5; ++i)
+ {
+  scanf("%d", &a);
+  if(a < 0){
+   a = -a;
+  }
+
+  if(a % 2 == 0){
+   tmp++;
+  }
+ }
+
+ printf("%d valores pares\n", tmp);
+
+ return 0;
+}
+______________________________________________________________________________________________
+
+1066
+
+#include <stdio.h>
+
+int main()
+{
+ int n, i;
+ int pos = 0, neg = 0, par = 0, im = 0;
+ 
+ for(i = 0; i < 5; ++i)
+ {
+  scanf("%d", &n);
+  if(n > 0){
+   pos++;
+  }else{
+   if(n != 0){
+    neg++;
+   }
+  }
+  
+  if(n % 2 == 0){
+   par++;
+  }else{
+   im++;
+  }
+ }
+ 
+ printf("%d valor(es) par(es)\n", par);
+ printf("%d valor(es) impar(es)\n", im);
+ printf("%d valor(es) positivo(s)\n", pos);
+ printf("%d valor(es) negativo(s)\n", neg);
+ 
+ return 0;
+}
+______________________________________________________________________________________________
+
+1067
+______________________________________________________________________________________________
+
+1068
+______________________________________________________________________________________________
+
+1069
+______________________________________________________________________________________________
+
+1070
+
+#include <stdio.h>
+int main(){
+
+ int i, X, howManyOdd = 6;
+ scanf("%d", &X);
+ for( i = X; i < (X+(howManyOdd*2)) ; i+=2){
+  int odd;
+  if(i % 2 == 0){
+   odd = i + 1;
+   printf("%d\n", odd);
+  }else{
+   odd = i;
+   printf("%d\n", odd);
+  }
+ }
+ return 0;
+}
+______________________________________________________________________________________________
+
+1071
+
+#include <stdio.h>
+
+int main()
+{
+ int x, y, tmp = 0, i;
+ int min, max;
+
+ scanf("%d%d", &x,&y);
+
+ if(x < y){
+  min = x;
+  max = y;
+ }else{
+  max = x;
+  min = y;
+ }
+
+ for(i = (min + 1); i < max; ++i)
+ {
+  if(i % 2 == 1 || i % 2 == -1){
+   tmp += i;
+  }
+ }
+
+ printf("%d\n", tmp);
+
+ return 0;
+}
+______________________________________________________________________________________________
+
+1072
+
+#include <stdio.h>
+int main()
+{
+    int x, a, i;
+
+    int in = 0;
+    int out = 0;
+
+    scanf("%d", &x);
+    for(i = 0; i < x; i++)
+    {
+        scanf("%d", &a);
+        if(a >= 10 && a <= 20){
+            in++;
+        }else{
+            out++;
+        }
+
+    }
+    printf("%d in\n", in);
+    printf("%d out\n", out);
+
+    return 0;
+}
+
+______________________________________________________________________________________________
+
+1073
+______________________________________________________________________________________________
+
+1074
+______________________________________________________________________________________________

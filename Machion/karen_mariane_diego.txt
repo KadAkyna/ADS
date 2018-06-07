@@ -1,0 +1,74 @@
+Option Explicit
+
+Public Sub media()
+
+Dim notaum As Single
+Dim notadois As Single
+Dim notatres As Single
+Dim media As Single
+
+notaum = CSng(InputBox("Digite a primeira nota"))
+notadois = CSng(InputBox("Digite a segunda nota"))
+notatres = CSng(InputBox("Digite a terceira nota"))
+
+If notaum < notadois And notaum < notatres Then
+	media = (notadois + notatres) / 2
+	MsgBox "A média das duas maiores notas é " & media
+
+ElseIf notadois < notaum And notadois < notatres Then
+	media = (notaum + notatres) / 2
+	MsgBox "A média das duas maiores notas é " & media
+    
+ElseIf notatres < notaum And notatres < notadois Then
+	media = (notaum + notadois) / 2
+	MsgBox "A média das duas maiores notas é " & media
+    
+ElseIf notatres = notaum Then
+	media = (notaum + notadois) / 2
+	MsgBox "A média das duas maiores notas é " & media
+    
+ElseIf notatres = notadois Then
+	media = (notaum + notadois) / 2
+	MsgBox "A média das duas maiores notas é " & media
+    
+ElseIf notaum = notadois Then
+	media = (notatres + notadois) / 2
+	MsgBox "A média das duas maiores notas é " & media
+    
+Else:
+	media = (notaum + notadois + notatres) / 3
+	MsgBox "A média das duas maiores notas é " & media
+    
+End If
+
+End Sub
+_______________________________________________________________________________________________________________
+Public Sub ir()
+
+Dim salario As Double
+Dim valorano As Double
+Dim base1 As Single
+Dim base2 As Single
+Dim calculo As Single
+
+base1 = 15764.28
+base2 = 31501.44
+
+salario = CDbl(InputBox("Digite seu salário em R$ "))
+valorano = salario * 13
+
+If valorano <= base1 Then
+	MsgBox "Você é isento do imposto. Parabéns"
+
+ElseIf valorano > base1 And valorano <= base2 Then
+	calculo = valorano * 0.15
+	MsgBox "O valor que você vai pagar é " & calculo
+        
+Else:
+	calculo = valorano * 0.275
+	MsgBox "O valor que você vai pagar é " & calculo
+
+End If
+
+
+End Sub

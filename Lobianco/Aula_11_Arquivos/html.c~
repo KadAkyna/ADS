@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+   FILE *saida;
+
+   if ((saida = fopen("teste.html", "w"))==NULL)
+     printf("Erro ao abrir arquivo\n");
+   else
+   {   
+      fprintf(saida,"");
+      fclose(saida);
+   }
+}
+

@@ -1,0 +1,229 @@
+Option Explicit
+Public Sub horascerto()
+
+Dim diaini As Integer, diafim As Integer, dias As Integer
+Dim horaini As Date, horafim As Date
+Dim data As Integer, horas As Integer, minutos As Integer, segundos As Integer, totalsegundos As Integer
+Dim str As String
+
+str = ""
+
+diaini = InputBox("Dia de inicio")
+
+horaini = InputBox("hora inicial formato hh:mm:ss")
+
+diafim = InputBox("Dia de término")
+
+horafim = InputBox("hora final formato hh:mm:ss")
+
+data = DateDiff("h", horaini, horafim)
+
+dias = diafim - diaini
+
+segundos = DateDiff("s", horaini, horafim)
+
+totalsegundos = DateDiff("s", horaini, horafim)
+
+horas = totalsegundos \ 3600
+
+minutos = (totalsegundos Mod 3600) \ 60
+
+segundos = totalsegundos - ((horas * 3600) + (minutos * 60))
+
+    If horas < 0 Then
+
+        horas = horas * (-1)
+    
+    End If
+
+    If minutos < 0 Then
+
+        minutos = minutos * (-1)
+    
+    End If
+    
+    If segundos < 0 Then
+
+        segundos = segundos * (-1)
+
+    End If
+
+MsgBox dias & " dia(s)" & Chr(13) & horas & " hora(s)" & Chr(13) & minutos & " minuto(s)" & Chr(13) & segundos & " segundo(s)"
+
+End Sub
+_______________________________________________________________________________________________
+
+Public Sub pares_imp_pos_neg()
+
+Dim v(4) As Integer, i As Integer
+Dim pares As Integer, impares As Integer
+Dim positivos As Integer, negativos As Integer
+Dim str As String
+
+str = ""
+pares = 0
+
+For i = 0 To 4
+    v(i) = CInt(InputBox("Posição: " & i & ": ", "entrada", 0))
+    str = str & v(i) & " "
+        If v(i) Mod 2 = 0 Then
+            pares = pares + 1
+        End If
+Next
+
+impares = 5 - pares
+
+For i = 0 To 4
+    If v(i) > 0 Then
+        positivos = positivos + 1
+    Else
+        negativos = negativos + 1
+    End If
+    
+Next
+
+MsgBox pares & " valor(es) pares" & Chr(13) & impares & " valor(es) ímpares" & Chr(13) & positivos & " valor(es) positivos" & Chr(13) & negativos & " valor(es) negativos"
+
+End Sub
+_______________________________________________________________________________________________
+
+Public Sub fib()
+
+Dim fib(61) As Double, i As Integer, entrada As Integer, T As Integer, casos As Integer
+
+fib(0) = 0
+fib(1) = 1
+
+casos = 1
+
+    For i = 2 To 60
+
+        fib(i) = fib(i - 1) + fib(i - 2)
+     
+    Next
+
+T = CDbl(InputBox("Quantidade de casos de teste:"))
+
+    While casos <= T
+
+        entrada = CDbl(InputBox("Escolha o número de 0 a 60 que você quer saber o Fibonacci"))
+       
+        MsgBox "Fib(" & entrada & ") = " & fib(entrada)
+
+        casos = casos + 1
+
+    Wend
+
+End Sub
+_______________________________________________________________________________________________
+
+Public Sub vetor_tres()
+
+Dim v(100) As Currency, i As Double, entrada As Double
+Dim str As String
+
+v(0) = CDbl(InputBox("Escolha o número"))
+
+str = "v(0)= " & Format(v(0), "#.0000")
+
+For i = 1 To UBound(v)
+
+        v(i) = v(i - 1) / 2
+        str = str & "v(" & i & ")=  " & Format(v(i), "#.0000") & " " & Chr(13)
+Next
+
+MsgBox str
+
+End Sub
+_______________________________________________________________________________________________
+
+Public Sub pares_imp()
+
+Dim total(14) As Integer, j As Integer
+Dim impar(4) As Integer, par(4) As Integer, i As Integer
+Dim str As String, str2 As String
+Dim contador_par As Integer
+Dim contador_impar As Integer
+
+contador_par = 0
+contador_impar = 0
+
+str = ""
+str2 = ""
+
+For j = 0 To 14
+    total(j) = CInt(InputBox("Posição: " & j & ": ", "entrada", 0))
+Next
+
+For i = 0 To UBound(total)
+
+    If total(i) Mod 2 = 0 Then
+        par(contador_par) = total(i)
+        str = str & "par(" & contador_par & ") = " & par(contador_par) & Chr(13)
+        contador_par = contador_par + 1
+            If contador_par = 5 Then
+                Erase par
+                contador_par = 0
+            End If
+    Else
+        impar(contador_impar) = total(i)
+        str2 = str2 & "impar(" & contador_impar & ") = " & impar(contador_impar) & Chr(13)
+        contador_impar = contador_impar + 1
+            If contador_impar = 5 Then
+                Erase impar
+                contador_impar = 0
+            End If
+    End If
+          
+Next
+        
+MsgBox str & str2
+
+End Sub
+_______________________________________________________________________________________________
+Public Sub TamanhoDaPlaca()
+
+Dim x As Double, y As Double, M As Double, casos As Double, dimensao As Double
+
+Dim Xi As Double, Yi As Double, Dimensaoi As Double
+
+Dim str As String
+
+str = ""
+
+x = CDbl(InputBox("preencha o altura"))
+
+y = CDbl(InputBox("preencha a largura"))
+
+M = CDbl(InputBox("Quantidade de peças"))
+
+    While M >= 100000
+
+        MsgBox "não temos essa quantidade!"
+        M = CDbl(InputBox("Quantidade de peças"))
+    
+    Wend
+
+casos = 1
+dimensao = x * y
+    
+    While casos <= M
+        
+        Xi = CDbl(InputBox("preencha o altura"))
+        Yi = CDbl(InputBox("preencha a largura"))
+        
+        Dimensaoi = Xi * Yi
+    
+        If dimensao >= Dimensaoi Then
+            str = str + " sim " & Chr(13)
+        Else
+            str = str + " não " & Chr(13)
+        End If
+    
+        casos = casos + 1
+
+    Wend
+
+MsgBox str
+
+End Sub
